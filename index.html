@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Float Labels test</title>
+    <!-- 0a. CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/global-cms.css">
+ 
+    <!-- 0a. JS -->
+    <script src="js/jquery-min.js"></script><!-- jquery.js -->
+    <script src="js/main.js"></script><!-- main.js -->
+  </head>
+ 
+  <body>
+    <div class="tnf-custom">
+            <div class="row">
+                    <h1>Form Elements</h1>
+                    <p><span class="small"><strong>Text Input</strong></span></p>
+                    <div class="large-4 medium-4 small-12 columns">
+                        <p class="bold">Text input regular</p>
+                        <form action=" " class="form-container" autocomplete="on">
+                            <fieldset class="field-wrapper">
+                        <input placeholder=" " type="text" class="form-control css-only-form" autocomplete="first name"> 
+                        <label class="field-label-alt" id="field-label">First name</label>
+                        </fieldset>
+                    </form> <br><br>    
+                    </div>
+                
+                    <div class="large-4 medium-4 small-12 columns">
+                         <p class="bold">Text input with help field</p>
+                       <form action="" class="form-container" autocomplete="on">
+                        <fieldset class="field-wrapper"> 
+                            <input placeholder=" " type="text" name="lastName" autocomplete="name" class="form-control css-only-form field-help-control" autocomplete="first name">
+                            <div class="field-help"> Please use your full name</div>
+                            <label class="field-label-alt">First name</label>
+                        </fieldset>
+                        </form> 
+                    
+                    </div>
+                    <div class="large-4 medium-4 small-12 columns">
+                    <form action="" class="form-container" autocomplete="on">
+                        <p class="bold">Validation feedback (2px border + red background)</p>
+                        <fieldset class="field-wrapper"> 
+                            <input placeholder=" " type="text" autocomplete="name" class="form-control css-only-form invalid-error-altbg" autocomplete="first name" aria-required="true" required>
+                        <label class="field-label-alt">First name<sup>*</sup></label>
+                    </fieldset>
+                         <div class="invalid">First name is a required field.</div>
+                        </form>
+                       
+                    </div>
+
+                    <div class="clearfix"></div>
+                   <!--  ALTERNATE ANIMATION: input text then label animates in and shows above text entry-->
+
+                   <div class="large-6 medium-6 small-12 columns checkout-form">
+                            <p class="bold">Form Layout - floating labels animation (Jquery + CSS)</p>
+                            
+                            
+                           <form action=""> 
+                            <fieldset class="field-wrapper"> 
+                                    <label class="field-label">Email</label>
+                                        <input placeholder="Email" autocapitalize="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" spellcheck="false" aria-required="true" class="form-control" name="checkout[email]" type="email" >
+                                        <div class="invalid-error">Please enter your email address</div>
+
+
+                             </fieldset> 
+                             
+                                <fieldset class="field-wrapper field-half"> 
+                                    <label class="field-label">First name</label>
+                                    <input placeholder="First name" aria-required="true" pattern="[a-zA-Z]*" class="form-control" type="text" name="firstName" > 
+                                </fieldset> 
+
+                                <fieldset class="field-wrapper field-half"> 
+                                    <label class="field-label">Last name</label>
+                                    <input placeholder="Last name" type="text"  pattern="[a-zA-Z]*" name="lastName" class="form-control" aria-required="true" >
+                                </fieldset>
+
+                                <fieldset class="field-wrapper"> 
+                                    <label class="field-label">Address</label>
+                                        <input placeholder="Address" autocapitalize="off" spellcheck="false" aria-required="true" class="form-control" name="checkout[address]" type="text" >
+
+                                </fieldset> 
+
+                                <fieldset class="field-wrapper"> 
+                                    <label class="field-label">Apartment, suite, etc (optional)</label>
+                                        <input placeholder="Apartment, suite, etc (optional)" autocapitalize="off" spellcheck="false"  class="form-control" name="checkout[address]" type="text" >
+                                </fieldset>
+
+                                <fieldset class="field-wrapper"> 
+                                    <label class="field-label">City</label>
+                                        <input placeholder="City" autocapitalize="off" pattern="[a-zA-Z]*" spellcheck="false" aria-required="true" class="form-control" name="checkout[address]" type="text" >
+                                </fieldset>
+
+                                <fieldset class="field-wrapper field--three-eigths"> 
+                                <label class="field-label">Country</label>
+                                <select class="form-control" aria-required="true" name="checkout[shipping_address][country]">
+                                <option data-code="US" selected value="United States">United States</option></select>
+
+                            </fieldset>
+
+                            <fieldset class="field-wrapper field--three-eigths">
+                                <label class="field-label">State</label>
+                                <select placeholder="California" autocomplete="shipping address-level1" class="form-control" aria-required="true" name="checkout[shipping_address][province]"><option value="">State</option><option data-code="AL" value="Alabama">Alabama</option><option data-code="AK" value="Alaska">Alaska</option><option data-code="AS" value="American Samoa">American Samoa</option><option data-code="AZ" value="Arizona">Arizona</option><option data-code="AR" value="Arkansas">Arkansas</option><option data-code="CA" value="California">California</option><option data-code="CO" value="Colorado">Colorado</option><option data-code="CT" value="Connecticut">Connecticut</option><option data-code="DE" value="Delaware">Delaware</option><option data-code="DC" value="District of Columbia">District of Columbia</option><option data-code="FM" value="Federated States of Micronesia">Federated States of Micronesia</option><option data-code="FL" value="Florida">Florida</option><option data-code="GA" value="Georgia">Georgia</option><option data-code="GU" value="Guam">Guam</option><option data-code="HI" value="Hawaii">Hawaii</option><option data-code="ID" value="Idaho">Idaho</option><option data-code="IL" value="Illinois">Illinois</option><option data-code="IN" value="Indiana">Indiana</option><option data-code="IA" value="Iowa">Iowa</option><option data-code="KS" value="Kansas">Kansas</option><option data-code="KY" value="Kentucky">Kentucky</option><option data-code="LA" value="Louisiana">Louisiana</option><option data-code="ME" value="Maine">Maine</option><option data-code="MH" value="Marshall Islands">Marshall Islands</option><option data-code="MD" value="Maryland">Maryland</option><option data-code="MA" value="Massachusetts">Massachusetts</option><option data-code="MI" value="Michigan">Michigan</option><option data-code="MN" value="Minnesota">Minnesota</option><option data-code="MS" value="Mississippi">Mississippi</option><option data-code="MO" value="Missouri">Missouri</option><option data-code="MT" value="Montana">Montana</option><option data-code="NE" value="Nebraska">Nebraska</option><option data-code="NV" value="Nevada">Nevada</option><option data-code="NH" value="New Hampshire">New Hampshire</option><option data-code="NJ" value="New Jersey">New Jersey</option><option data-code="NM" value="New Mexico">New Mexico</option><option data-code="NY" value="New York">New York</option><option data-code="NC" value="North Carolina">North Carolina</option><option data-code="ND" value="North Dakota">North Dakota</option><option data-code="MP" value="Northern Mariana Islands">Northern Mariana Islands</option><option data-code="OH" value="Ohio">Ohio</option><option data-code="OK" value="Oklahoma">Oklahoma</option><option data-code="OR" value="Oregon">Oregon</option><option data-code="PW" value="Palau">Palau</option><option data-code="PA" value="Pennsylvania">Pennsylvania</option><option data-code="PR" value="Puerto Rico">Puerto Rico</option><option data-code="RI" value="Rhode Island">Rhode Island</option><option data-code="SC" value="South Carolina">South Carolina</option><option data-code="SD" value="South Dakota">South Dakota</option><option data-code="TN" value="Tennessee">Tennessee</option><option data-code="TX" value="Texas">Texas</option><option data-code="UT" value="Utah">Utah</option><option data-code="VT" value="Vermont">Vermont</option><option data-code="VI" value="Virgin Islands">Virgin Islands</option><option data-code="VA" value="Virginia">Virginia</option><option data-code="WA" value="Washington">Washington</option><option data-code="WV" value="West Virginia">West Virginia</option><option data-code="WI" value="Wisconsin">Wisconsin</option><option data-code="WY" value="Wyoming">Wyoming</option><option data-code="AA" value="Armed Forces Americas">Armed Forces Americas</option><option data-code="AE" value="Armed Forces Europe">Armed Forces Europe</option><option data-code="AP" value="Armed Forces Pacific">Armed Forces Pacific</option></select>
+
+                            </fieldset>
+
+                            <fieldset class="field-wrapper field-quarter">
+                                <label class="field-label">ZIP code</label>
+                                <input placeholder="ZIP code" class="form-control" aria-required="true"  name="checkout[shipping_address][zip]" type="text" >
+
+                            </fieldset>
+                        </form>
+                           
+                    </div>
+                    -->
+                    <div class="large-6 medium-6 small-12 columns">  
+                     
+                        <p class="bold">Form Layout - floating labels (2px border active + jquery select dropdowns)</p>
+                    
+                         <form action="" class="form-container" autocomplete="on"> 
+                        <p><sup>*</sup>Indicates required </p> 
+                            <fieldset class="field-wrapper"> 
+                                        <input placeholder=" " autocapitalize="off" spellcheck="false" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" autocomplete="email" class="form-control border-heavy css-only-form" name="checkout[email]" type="email" >
+                                        <label class="field-label-alt">Email<sup>*</sup></label>
+
+                            </fieldset>
+                             
+                            <fieldset class="field-wrapper field-half"> 
+                                   
+                                    <input placeholder=" " aria-required="true" pattern="[a-zA-Z]*" class="form-control border-heavy css-only-form" type="text" name="firstName" autocomplete="first name"> 
+                                     <label class="field-label-alt">First name<sup>*</sup></label>
+
+                             </fieldset>  
+                                   
+                            <fieldset class="field-wrapper field-half">
+                                    
+                                    <input placeholder=" " type="text" pattern="[a-zA-Z]*" aria-required="true" name="lastName" class="form-control border-heavy css-only-form" autocomplete="last name" >
+                                    <label class="field-label-alt">Last name<sup>*</sup></label>
+
+                            </fieldset>
+
+                             <fieldset class="field-wrapper"> 
+                                    
+                                        <input placeholder=" " autocapitalize="off" spellcheck="false" aria-required="true" class="form-control border-heavy css-only-form" name="checkout[address]" type="text" autocomplete="shipping street-address">
+                                        <label class="field-label-alt">Address<sup>*</sup></label>
+                                </fieldset> 
+
+                                <fieldset class="field-wrapper"> 
+                                    
+                                        <input placeholder=" " autocapitalize="off" spellcheck="false" aria-required="true" class="form-control border-heavy css-only-form" name="checkout[address]" type="text">
+                                        <label class="field-label-alt">Apartment, suite, etc (optional)</label>
+                                </fieldset> 
+
+                                <fieldset class="field-wrapper"> 
+                                        <input placeholder=" " autocapitalize="off" pattern="[a-zA-Z]*" spellcheck="false" aria-required="true" class="form-control border-heavy css-only-form" name="checkout[address]" type="text" autocomplete="shipping locality" >
+                                        <div class="invalid-error">Please enter your city</div>
+                                         <label class="field-label-alt">City<sup>*</sup></label>
+                                </fieldset>
+                                <fieldset class="field-wrapper field--three-eigths"> 
+                                <label class="field-label">Country<sup>*</sup></label>
+                                <select class="form-control border-heavy" placeholder= " " aria-required="true" name="checkout[shipping_address][country]">
+                                <option data-code="US" value="United States">United States</option>
+
+                            </select>
+                            </fieldset>
+
+                            <fieldset class="field-wrapper field--three-eigths">
+                                <label class="field-label">State<sup>*</sup></label>
+                                <select placeholder=" " class="form-control border-heavy form-select" aria-required="true" name="checkout[shipping_address][province]" autocomplete="shipping region" ><option value="">State</option><option data-code="AL" value="Alabama">Alabama</option><option data-code="AK" value="Alaska">Alaska</option><option data-code="AS" value="American Samoa">American Samoa</option><option data-code="AZ" value="Arizona">Arizona</option><option data-code="AR" value="Arkansas">Arkansas</option><option data-code="CA" value="California">California</option><option data-code="CO" value="Colorado">Colorado</option><option data-code="CT" value="Connecticut">Connecticut</option><option data-code="DE" value="Delaware">Delaware</option><option data-code="DC" value="District of Columbia">District of Columbia</option><option data-code="FM" value="Federated States of Micronesia">Federated States of Micronesia</option><option data-code="FL" value="Florida">Florida</option><option data-code="GA" value="Georgia">Georgia</option><option data-code="GU" value="Guam">Guam</option><option data-code="HI" value="Hawaii">Hawaii</option><option data-code="ID" value="Idaho">Idaho</option><option data-code="IL" value="Illinois">Illinois</option><option data-code="IN" value="Indiana">Indiana</option><option data-code="IA" value="Iowa">Iowa</option><option data-code="KS" value="Kansas">Kansas</option><option data-code="KY" value="Kentucky">Kentucky</option><option data-code="LA" value="Louisiana">Louisiana</option><option data-code="ME" value="Maine">Maine</option><option data-code="MH" value="Marshall Islands">Marshall Islands</option><option data-code="MD" value="Maryland">Maryland</option><option data-code="MA" value="Massachusetts">Massachusetts</option><option data-code="MI" value="Michigan">Michigan</option><option data-code="MN" value="Minnesota">Minnesota</option><option data-code="MS" value="Mississippi">Mississippi</option><option data-code="MO" value="Missouri">Missouri</option><option data-code="MT" value="Montana">Montana</option><option data-code="NE" value="Nebraska">Nebraska</option><option data-code="NV" value="Nevada">Nevada</option><option data-code="NH" value="New Hampshire">New Hampshire</option><option data-code="NJ" value="New Jersey">New Jersey</option><option data-code="NM" value="New Mexico">New Mexico</option><option data-code="NY" value="New York">New York</option><option data-code="NC" value="North Carolina">North Carolina</option><option data-code="ND" value="North Dakota">North Dakota</option><option data-code="MP" value="Northern Mariana Islands">Northern Mariana Islands</option><option data-code="OH" value="Ohio">Ohio</option><option data-code="OK" value="Oklahoma">Oklahoma</option><option data-code="OR" value="Oregon">Oregon</option><option data-code="PW" value="Palau">Palau</option><option data-code="PA" value="Pennsylvania">Pennsylvania</option><option data-code="PR" value="Puerto Rico">Puerto Rico</option><option data-code="RI" value="Rhode Island">Rhode Island</option><option data-code="SC" value="South Carolina">South Carolina</option><option data-code="SD" value="South Dakota">South Dakota</option><option data-code="TN" value="Tennessee">Tennessee</option><option data-code="TX" value="Texas">Texas</option><option data-code="UT" value="Utah">Utah</option><option data-code="VT" value="Vermont">Vermont</option><option data-code="VI" value="Virgin Islands">Virgin Islands</option><option data-code="VA" value="Virginia">Virginia</option><option data-code="WA" value="Washington">Washington</option><option data-code="WV" value="West Virginia">West Virginia</option><option data-code="WI" value="Wisconsin">Wisconsin</option><option data-code="WY" value="Wyoming">Wyoming</option><option data-code="AA" value="Armed Forces Americas">Armed Forces Americas</option><option data-code="AE" value="Armed Forces Europe">Armed Forces Europe</option><option data-code="AP" value="Armed Forces Pacific">Armed Forces Pacific</option></select>
+
+                            </fieldset>
+
+                            <fieldset class="field-wrapper field-quarter">
+                                <input placeholder=" " title="Five digit zip code" class="form-control border-heavy css-only-form" pattern="[0-9]{5}" aria-required="true"  name="checkout[shipping_address][zip]" type="text" autocomplete="shipping postal-code" >
+                                <label class="field-label-alt">ZIP code<sup>*</sup></label>
+
+
+                            </fieldset>
+                        </form>
+                            
+                            
+                    </div>
+                    <div class="clearfix"></div>
+
+               <div class="large-12 medium-12 small-12 columns"> 
+                <div class="field-wrapper-notes">
+                        <fieldset> 
+                         <legend>Order notes</legend> 
+                        <label>Write a note with your order</label><textarea class="form-control text-area"></textarea>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="large-6 medium-6 small-12 columns"> 
+                     <form action="" class="form-container">
+                        <p>Inline button</p>
+                    <fieldset class="field-wrapper field-half email-form">
+                    <input placeholder="Enter your email" autocapitalize="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" spellcheck="false" aria-required="true" class="form-control email-form" name="checkout[email]" type="email" required >
+                    <div class="invalid-error">An email address is required to sign up</div>
+                    </fieldset> 
+                                         <button class="button button--medium button--secondary field-half">Sign Up</button>
+
+                 </form>
+
+                </div>
+                <div class="large-6 medium-6 small-12 columns"> 
+                <form action="" class="form-container">
+                        <p>Block display button</p>
+                    <fieldset class="field-wrapper email-form">
+                    <input placeholder="Enter your email" autocapitalize="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" spellcheck="false" aria-required="true" class="form-control email-form" name="checkout[email]" type="email" required >
+                    <div class="invalid-error">An email address is required to sign up</div>
+
+                    </fieldset> 
+                     <button class="button button--medium button--secondary">Sign Up</button>
+                 </form>
+
+                </div>
+                </div>
+                
+                   
+            <div class="row">
+            <p><span class="small"><strong>Radio Buttons, Checkboxes, &amp; Dropdowns</strong></span></p>
+                <div class="large-2 medium-2 small-12 columns">
+                    <p class="bold">Radio buttons regular</p>
+                    <fieldset class="field-wrapper"><legend>Subscription</legend> 
+                        <div>
+                            <label for="option1" >
+                            <input id="option1"  class="radio" value="Ship every week" name="subscription" checked="checked" aria-checked="true" type="radio" 
+                            role="radio">
+                            Ship every week</label>
+                            <label for="option2">
+                            <input id="option2" class="radio" value="Ship every 2 weeks" name="subscription" type="radio" role="radio">
+                            Ship every 2 weeks</label>
+                            <label for="option3">
+                            <input id="option3" class="radio" value="Ship every 3 weeks" name="subscription" type="radio" role="radio">
+                            Ship every 3 weeks</label>
+                            <label for="option4">
+                            <input id="option4" class="radio" value="Ship every month" name="subscription" type="radio" role="radio">
+                            Ship every month</label>
+                        </div>
+                    </fieldset>
+                </div>
+                 <div class="large-4 medium-2 small-12 large-pull-6 columns">
+                <p class="bold">Checkbox regular</p>
+                <fieldset class="field-wrapper"><legend>Sign up for Promos?</legend> 
+                    <div>
+                        <label for="checkboxOption1">
+                        <input id="checkboxOption1" class="checkbox" value="Send me news & offers from The North Face" 
+                        name="marketing" checked="checked" aria-checked="true" type="checkbox" role="checkbox">
+                        Send me news & offers from The North Face<sup>®</sup></label>
+                    </div>
+                </fieldset>
+                </div>
+            </div>
+                
+            </div>
+        </div>
+  </body>
+</html>
+
